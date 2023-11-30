@@ -19,10 +19,10 @@ def load_data():
     Loader.add_constructor('!includeBathymetryNetCDF', Loader.includeBathymetryNetCDF)
 
     # Load YAML files
-    with open('../Reference_Site_Draft/IEA37_Borssele_Regular_System.yaml', 'r') as f:
+    with open('./IEA37_Borssele_Regular_System.yaml', 'r') as f:
         regular_system = yaml.load(f, Loader)
 
-    with open('../Reference_Site_Draft/IEA37_Borssele_irregular_System.yaml', 'r') as f:
+    with open('./IEA37_Borssele_irregular_System.yaml', 'r') as f:
         irregular_system = yaml.load(f, Loader)
 
     # Extract site and wind farm data
@@ -45,5 +45,5 @@ def load_data():
     return X, Y, substation_pos, cable_costs, turbines_per_cable
 
 # Example usage
-#X, Y, substation_pos, cable_costs, turbines_per_cable = load_data()
+X, Y, substation_pos, cable_costs, turbines_per_cable = load_data()
 
